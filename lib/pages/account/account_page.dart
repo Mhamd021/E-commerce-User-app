@@ -62,7 +62,7 @@ class AccountPage extends StatelessWidget {
                                 size: Dimensions.height10 * 5,
                               ),
                               bigText: BigText(
-                                text: "Ahmad",
+                                text: "Mhamd",
                               )),
                           SizedBox(
                             height: Dimensions.height20,
