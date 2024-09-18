@@ -4,8 +4,8 @@ import 'package:sampleproject/widgets/app_icon.dart';
 import 'package:sampleproject/widgets/big_text.dart';
 
 class AccountWidget extends StatelessWidget {
-  APPIcon appIcon;
-BigText bigText;
+  final APPIcon appIcon;
+final BigText bigText;
  AccountWidget({ Key? key ,required this.appIcon,required this.bigText}) : super(key: key);
 
   @override
@@ -35,7 +35,7 @@ BigText bigText;
          BoxShadow
          (
           blurRadius: 1,
-          offset: Offset(0, 5),
+          offset: const Offset(0, 5),
           color: Colors.grey.withOpacity(0.2),
          ),
           

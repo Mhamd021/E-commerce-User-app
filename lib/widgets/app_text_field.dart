@@ -9,7 +9,7 @@ class AppTextField extends StatelessWidget {
   final TextEditingController textController;
   final String hintText;
   final IconData icon;
-  bool isObs ; 
+  final bool isObs ; 
    AppTextField({ Key? key ,
   required this.textController,
   required this.hintText,

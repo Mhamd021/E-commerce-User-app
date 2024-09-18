@@ -18,7 +18,7 @@ class AuthRepo
         });
         Future<String> getUserToken()
         async {
-          return await sharedPreferences.getString(AppConsts.TOKEN)??"None";
+          return  sharedPreferences.getString(AppConsts.TOKEN)??"None";
         }
         bool userLoggedIn()
         {
@@ -36,7 +36,7 @@ class AuthRepo
         Future<bool>saveUserToken(String token) async
         {
           api.token = token ; 
-          api.UpdateHeader(token);
+          api.updateHeader(token);
           return await sharedPreferences.setString(AppConsts.TOKEN, token);
         }
 
@@ -44,7 +44,7 @@ class AuthRepo
         {
           sharedPreferences.remove(AppConsts.TOKEN);
           api.token = '';
-          api.UpdateHeader('');
+          api.updateHeader('');
           return true;
         }
 

@@ -5,9 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sampleproject/base/show_custom_snackbar.dart';
 import 'package:sampleproject/controllers/auth_controller.dart';
-import 'package:sampleproject/models/signup_body_model.dart';
 import 'package:sampleproject/pages/auth/sign_up_page.dart';
-import 'package:sampleproject/pages/home/main_page.dart';
 import 'package:sampleproject/routes/route_helper.dart';
 import 'package:sampleproject/utili/colors.dart';
 import 'package:sampleproject/utili/dimensions.dart';
@@ -75,7 +73,7 @@ class SignInPage extends StatelessWidget {
           [
             SizedBox(height: Dimensions.screenHeight/5),
             //app logo
-            Container
+            SizedBox
             (
               height: Dimensions.screenHeight*0.2,
               child: Center(

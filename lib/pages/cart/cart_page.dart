@@ -6,15 +6,11 @@ import 'package:sampleproject/controllers/auth_controller.dart';
 import 'package:sampleproject/controllers/cart_controller.dart';
 import 'package:sampleproject/controllers/product_controller.dart';
 import 'package:sampleproject/pages/based/no_data_page.dart';
-import 'package:sampleproject/pages/home/main_page.dart';
 import 'package:sampleproject/utili/app_consts.dart';
 import 'package:sampleproject/utili/colors.dart';
 import 'package:sampleproject/utili/dimensions.dart';
 import 'package:sampleproject/widgets/app_icon.dart';
 import 'package:sampleproject/widgets/big_text.dart';
-import 'package:sampleproject/widgets/small_text.dart';
-import 'package:get/get.dart';
-
 import '../../routes/route_helper.dart';
 import '../../widgets/icon_and_text_widget.dart';
 
@@ -58,7 +54,7 @@ class CartPage extends StatelessWidget {
             ),
       GetBuilder<CartControler>(builder: (_cartController)
       {
-        return _cartController.getItems.length>0? Positioned(
+        return _cartController.getItems.isNotEmpty? Positioned(
         top: Dimensions.height20*5,
         left: Dimensions.width20,
         right:Dimensions.width20 ,
@@ -78,10 +74,10 @@ class CartPage extends StatelessWidget {
               return GestureDetector(
                 onTap: ()
         {
-           var productindex =  Get.find<ProductController>().ProductList.indexOf(_cartList[index].product!);
+           var productindex =  Get.find<ProductController>().productList.indexOf(_cartList[index].product!);
           Get.toNamed(RouteHelper.getProduct(productindex,"cartpage"));
         },
-                child: Container
+                child: SizedBox
                 (
                     height: Dimensions.height20*5,
                     width: double.maxFinite,
@@ -111,7 +107,7 @@ class CartPage extends StatelessWidget {
                         ),
                         SizedBox(width: Dimensions.width10),
                         Expanded(
-                          child:Container(
+                          child:SizedBox(
                             height: Dimensions.height10*10,
                             child: Column
                             (
@@ -186,7 +182,7 @@ class CartPage extends StatelessWidget {
             topRight: Radius.circular(Dimensions.radius20*2),
           )
         ),
-        child: cartproduct.getItems.length>0?Row(
+        child: cartproduct.getItems.isNotEmpty?Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(

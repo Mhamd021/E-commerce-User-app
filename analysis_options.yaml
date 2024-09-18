@@ -7,6 +7,9 @@
 
 # The following line activates a set of recommended lints for Flutter apps,
 # packages, and plugins designed to encourage good coding practices.
+analyzer:
+  errors:
+    unused_field: ignore
 include: package:flutter_lints/flutter.yaml
 
 linter:
@@ -27,8 +30,6 @@ linter:
      prefer_const_constructors_in_immutables: false
      use_key_in_widget_constructors: false
      prefer_const_literals_to_create_immutables: false
-     sized_box_for_whitespaces: false
      unnecessary_string_interpolations: false
-     unnnecessary_brace_in_string_interps: false
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options

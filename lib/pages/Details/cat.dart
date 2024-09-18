@@ -1,27 +1,11 @@
 
     
-// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables, unnecessary_new, must_call_super, prefer_final_fields
 
-import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:sampleproject/controllers/product_controller.dart';
-import 'package:sampleproject/controllers/shop_controller.dart';
-import 'package:sampleproject/models/product_model.dart';
-import 'package:sampleproject/models/shop_model.dart';
-import 'package:sampleproject/pages/Details/product-detail.dart';
-import 'package:sampleproject/pages/Details/shop_detail.dart';
-import 'package:sampleproject/routes/route_helper.dart';
-import 'package:sampleproject/utili/app_consts.dart';
-import 'package:sampleproject/utili/colors.dart';
 import 'package:sampleproject/utili/dimensions.dart';
-import 'package:sampleproject/widgets/app_column.dart';
 import 'package:sampleproject/widgets/big_text.dart';
-import 'package:sampleproject/widgets/icon_and_text_widget.dart';
 import 'package:sampleproject/widgets/small_text.dart';
 
-import '../../controllers/category_controller.dart';
-import '../../models/category_model.dart';
 
 
 
@@ -36,22 +20,20 @@ class HomePageBody  extends StatefulWidget {
 
 class _State extends State<HomePageBody> {
   PageController pageController = PageController(viewportFraction: 0.85);
-  var _currentPageValue = 0.0;
 
-  // ignore: non_constant_identifier_names
-  double ScaleFactor = 0.8;
-  double _height = Dimensions.pageViewContainer ;
+  
+  double scaleFactor = 0.8;
   @override
   void initState(){
     super.initState();
     pageController.addListener(() {
 setState(() {
-  _currentPageValue = pageController.page!;
 });
      });
   }
   @override
   void dispose(){
+    super.dispose();
     pageController.dispose();
   }
   @override

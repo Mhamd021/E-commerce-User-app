@@ -7,47 +7,6 @@ import '../models/signup_body_model.dart';
 
 class AuthController extends GetxController implements GetxService
 {
-
-// var isLoggedIn = false.obs;
-
-// var user = User().obs;
-// @override
-// void onInit() {
-//     super.onInit();
-//     redirect();
-//   }
-
-//    Future<void> redirect() async
-//   {
-//       var token =await GetStorage().read('login_token');
-
-//       if(token!=null)
-//       {
-//         isLoggedIn.value = true;
-//       }
-
-//       Get.off(MainPage());
-
-    
-//   }
-
-//   Future<void> login({required Map<String,dynamic> loginData}) async 
-//   {
-//     showloading();
-//     var response = await ApiClient.login(loginData: loginData);
-//     var userResponse = UserResponse.fromJson(response.data);
-//     await GetStorage().write('login_token', userResponse.token);
-//     user.value = userResponse.user;
-
-//     isLoggedIn.value = true; 
-//     update();
-//     closeLoading();
-//     Get.offAll(() =>MainPage());
-
-//   }
-
- 
-
   final AuthRepo authRepo;
   AuthController({
       required this.authRepo
@@ -91,7 +50,7 @@ class AuthController extends GetxController implements GetxService
    else
    {
     responseModel = ResponseModel(false, response.statusText!);
-
+        
    }
    _isLoading = false;
    update();

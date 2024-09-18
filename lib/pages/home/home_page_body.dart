@@ -5,11 +5,6 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sampleproject/controllers/product_controller.dart';
-import 'package:sampleproject/controllers/shop_controller.dart';
-import 'package:sampleproject/models/product_model.dart';
-import 'package:sampleproject/models/shop_model.dart';
-import 'package:sampleproject/pages/Details/product-detail.dart';
-import 'package:sampleproject/pages/Details/shop_detail.dart';
 import 'package:sampleproject/routes/route_helper.dart';
 import 'package:sampleproject/utili/app_consts.dart';
 import 'package:sampleproject/utili/colors.dart';
@@ -122,7 +117,7 @@ setState(() {
         return products.isLoaded?ListView.builder(
         physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
-      itemCount: products.ProductList.length,
+      itemCount: products.productList.length,
       itemBuilder: (context,index){
       return GestureDetector(
         onTap: ()
@@ -143,7 +138,7 @@ setState(() {
                  image: DecorationImage(
                    fit: BoxFit.cover,
                    image: NetworkImage(
-                     AppConsts.BASE_URI+"/"+products.ProductList[index].image!
+                     AppConsts.BASE_URI+"/"+products.productList[index].image!
                      ),
                      ),
                ), 
@@ -167,15 +162,15 @@ setState(() {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                     BigText(text: products.ProductList[index].name),
+                     BigText(text: products.productList[index].name),
                      SizedBox(height: Dimensions.height10,),
-                     SmallText(text: products.ProductList[index].detail),
+                     SmallText(text: products.productList[index].detail),
                       SizedBox(height: Dimensions.height10,),
                       Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           IconAndTextWidget(icon: Icons.monetization_on,
-                           text: products.ProductList[index].price.toString(),
+                           text: products.productList[index].price.toString(),
                         
                             iconColor: AppColors.mainColor),
                              

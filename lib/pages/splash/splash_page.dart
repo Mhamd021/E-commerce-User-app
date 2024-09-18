@@ -3,7 +3,6 @@
 
 import 'dart:async';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sampleproject/routes/route_helper.dart';
@@ -33,7 +32,7 @@ void initState()
 {
   super.initState();
   _LoadResource();
-  controller =  AnimationController(vsync: this, duration: Duration(seconds: 2))..forward();
+  controller =  AnimationController(vsync: this, duration: const Duration(seconds: 2))..forward();
   animation =  CurvedAnimation(parent: controller, curve: Curves.linear);
   Timer
   (

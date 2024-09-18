@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:latlong2/latlong.dart';
 class AppConsts 
 {
@@ -10,7 +12,7 @@ class AppConsts
   static const String CATEGORY_URI = "/api/categories"; 
   static const String CATEGORY_ALL_URI = "/api/Allcategories";
     static const String USER_INFO_URI = "/api/user";
-    static const String orders = "/api/user";
+    static const String Orders = "/api/user";
   static const String CATEGORY_PRODUCTS_URI = "/api/CategoryProducts/"; 
   static const String TOKEN = "" ; 
 static const String mapBoxAccessToken  = "pk.eyJ1IjoiZG9uMjEiLCJhIjoiY2xramN3d2RkMHRsNzNwa2dmdnIyZnBxMiJ9.ZXAz_MdYN4tANHbAALm5KQ"; 

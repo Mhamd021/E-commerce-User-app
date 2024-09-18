@@ -9,15 +9,15 @@ void showloading()
   (
     Dialog
     (
-        insetPadding: EdgeInsets.symmetric(horizontal: 150),
+        insetPadding: const EdgeInsets.symmetric(horizontal: 150),
         backgroundColor: Colors.white.withOpacity(.9),
-        child: Container
+        child:const SizedBox
         (
           height: 80,
           width: 5,
-          child: Center
+          child:  Center
           (
-            child: CircularProgressIndicator(),
+            child:   CircularProgressIndicator(),
           ),
         ),
     ),

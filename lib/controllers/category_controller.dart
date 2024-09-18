@@ -15,7 +15,6 @@ class CategoryController extends GetxController
       Response response = await categoryRepo.getcategorylist(); 
      if(response.statusCode==200)
      {
-      print("Categories");
       _categoryList=[];
       _categoryList.addAll(Category.fromJson(response.body).categories);
       _isLoaded=true;

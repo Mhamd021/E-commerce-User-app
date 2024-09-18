@@ -6,9 +6,9 @@ class Shop {
 
   Shop({ required success, required shops,  required message})
   {
-      this._success = success;
-      this._shops = shops;
-      this._message = message;
+      _success = success;
+      _shops = shops;
+      _message = message;
   }
 
   Shop.fromJson(Map<String, dynamic> json) {

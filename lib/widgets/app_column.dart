@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:sampleproject/widgets/small_text.dart';
-
 import '../utili/colors.dart';
 import '../utili/dimensions.dart';
 import 'big_text.dart';

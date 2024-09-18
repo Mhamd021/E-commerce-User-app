@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:get/get.dart';
-import 'package:latlong2/latlong.dart';
 import 'package:flutter_map/plugin_api.dart';
 import 'package:sampleproject/routes/route_helper.dart';
 import 'package:sampleproject/utili/colors.dart';
 import 'package:sampleproject/utili/dimensions.dart';
-import 'package:flutter_time_picker_spinner/flutter_time_picker_spinner.dart';
 import '../../base/show_custom_snackbar.dart';
 import '../../utili/app_consts.dart';
 import '../../widgets/app_text_field.dart';
@@ -20,7 +18,7 @@ class CheckoutOrder extends StatefulWidget {
 }
 
 class _CheckoutOrderState extends State<CheckoutOrder> {
-    TimeOfDay _time = TimeOfDay(hour: 7, minute: 15);
+    TimeOfDay _time = const TimeOfDay(hour: 7, minute: 15);
 
   void _selectTime() async {
     final TimeOfDay? newTime = await showTimePicker(

@@ -10,7 +10,7 @@ class CartControler extends GetxController
 {
     final CartRepo cartRepo;
     CartControler({required this.cartRepo});
-    Map<int,CartModel> _items = {};
+    final Map<int,CartModel> _items = {};
     Map<int,CartModel> get items =>_items;
 
     void addItem(ProductModel product,int quantity) 
@@ -24,7 +24,7 @@ class CartControler extends GetxController
           return CartModel
           (
             id: value.id,
-            store_id: product.storeId,
+            storeid: product.storeId,
             name: product.name,
             price: product.price,
             image: product.image,
@@ -46,7 +46,7 @@ class CartControler extends GetxController
              _items.putIfAbsent(product.id!, () => CartModel
     (
       id: product.id,
-      store_id: product.storeId,
+      storeid: product.storeId,
       name: product.name,
       price: product.price,
       image: product.image,
@@ -116,4 +116,3 @@ class CartControler extends GetxController
       return total;
     }
 }
-//10:28

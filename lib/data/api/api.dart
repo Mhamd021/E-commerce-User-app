@@ -12,7 +12,7 @@ class Api extends GetConnect implements GetxService
 
     Api({required this.appBaseUrl,required this.sharedPreferences}){
     baseUrl = appBaseUrl;
-    timeout = Duration(seconds: 30);
+    timeout = const  Duration(seconds: 30);
     token = sharedPreferences.getString(AppConsts.TOKEN)??"";
     _mainHeaders=
     {
@@ -21,7 +21,7 @@ class Api extends GetConnect implements GetxService
     };
 
     }
-    void UpdateHeader (String token)
+    void updateHeader (String token)
     {
         _mainHeaders=
     {

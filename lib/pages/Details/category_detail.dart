@@ -6,10 +6,7 @@ import 'package:sampleproject/controllers/category_controller.dart';
 import 'package:sampleproject/routes/route_helper.dart';
 import 'package:sampleproject/utili/colors.dart';
 import 'package:sampleproject/utili/dimensions.dart';
-import 'package:sampleproject/widgets/app_icon.dart';
 import 'package:sampleproject/widgets/big_text.dart';
-import 'package:sampleproject/widgets/expandable_text_widget.dart';
-
 import '../../controllers/product_controller.dart';
 import '../../utili/app_consts.dart';
 import '../../widgets/app_column.dart';
@@ -100,9 +97,9 @@ class CategoryDetail   extends StatelessWidget {
           
             physics: NeverScrollableScrollPhysics(),
           shrinkWrap: true,
-          itemCount: products.ProductList.length,
+          itemCount: products.productList.length,
           itemBuilder: (context,index){
-               if(products.ProductList[index].category== category.name!)
+               if(products.productList[index].category== category.name!)
             {
   return GestureDetector(
             onTap: ()
@@ -124,7 +121,7 @@ class CategoryDetail   extends StatelessWidget {
                      image: DecorationImage(
                        fit: BoxFit.cover,
                        image: NetworkImage(
-                         AppConsts.BASE_URI+"/"+products.ProductList[index].image!
+                         AppConsts.BASE_URI+"/"+products.productList[index].image!
                          ),
                          ),
                    ), 
@@ -148,15 +145,15 @@ class CategoryDetail   extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                         BigText(text: products.ProductList[index].name),
+                         BigText(text: products.productList[index].name),
                          SizedBox(height: Dimensions.height10,),
-                         SmallText(text: products.ProductList[index].detail),
+                         SmallText(text: products.productList[index].detail),
                           SizedBox(height: Dimensions.height10,),
                           Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               IconAndTextWidget(icon: Icons.monetization_on,
-                               text: products.ProductList[index].price.toString(),
+                               text: products.productList[index].price.toString(),
                             
                                 iconColor: AppColors.mainColor),
                                  

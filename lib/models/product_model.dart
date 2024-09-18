@@ -6,9 +6,9 @@ class Product {
 
   Product({ required success, required products, required message})
   {
-    this._success=success;
-    this._products=products;
-    this._message=message;
+    _success=success;
+    _products=products;
+    _message=message;
 
   }
 

@@ -9,7 +9,6 @@ import 'package:sampleproject/widgets/account_widget.dart';
 import 'package:sampleproject/widgets/app_icon.dart';
 import 'package:sampleproject/widgets/big_text.dart';
 
-import '../../utili/app_consts.dart';
 
 class AccountPage extends StatelessWidget {
   const AccountPage({Key? key}) : super(key: key);
@@ -107,49 +106,47 @@ class AccountPage extends StatelessWidget {
                       ),
                     )
                   : const CircularProgressIndicator())
-              : Container(
-                  child: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: double.maxFinite,
-                          height: Dimensions.height20 * 12,
-                          margin: EdgeInsets.only(
-                              left: Dimensions.width20,
-                              right: Dimensions.width20),
-                          decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.circular(Dimensions.radius20),
-                              image: const DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image:
-                                      AssetImage("assets/image/pngtest.png"))),
-                        ),
-                        SizedBox(height: Dimensions.height10,),
-                        GestureDetector(
-                          onTap: ()
-                          {
-                            Get.toNamed(RouteHelper.getSignIn());
-                          },
-                          child: Container(
-                            width: double.maxFinite,
-                            height: Dimensions.height20 *5,
-                            margin: EdgeInsets.only(
-                                left: Dimensions.width20,
-                                right: Dimensions.width20),
-                            decoration: BoxDecoration(
-                              color: AppColors.mainColor,
-                                borderRadius:
-                                    BorderRadius.circular(Dimensions.radius20),
-                            ),
-                            child: Center(child: BigText(text: "SignIN",color: Colors.white,size: Dimensions.font26,)),
-                          ),
-                        ),
-                      ],
+              : Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: double.maxFinite,
+                      height: Dimensions.height20 * 12,
+                      margin: EdgeInsets.only(
+                          left: Dimensions.width20,
+                          right: Dimensions.width20),
+                      decoration: BoxDecoration(
+                          borderRadius:
+                              BorderRadius.circular(Dimensions.radius20),
+                          image: const DecorationImage(
+                              fit: BoxFit.cover,
+                              image:
+                                  AssetImage("assets/image/pngtest.png"))),
                     ),
-                  ),
-                );
+                    SizedBox(height: Dimensions.height10,),
+                    GestureDetector(
+                      onTap: ()
+                      {
+                        Get.toNamed(RouteHelper.getSignIn());
+                      },
+                      child: Container(
+                        width: double.maxFinite,
+                        height: Dimensions.height20 *5,
+                        margin: EdgeInsets.only(
+                            left: Dimensions.width20,
+                            right: Dimensions.width20),
+                        decoration: BoxDecoration(
+                          color: AppColors.mainColor,
+                            borderRadius:
+                                BorderRadius.circular(Dimensions.radius20),
+                        ),
+                        child: Center(child: BigText(text: "SignIN",color: Colors.white,size: Dimensions.font26,)),
+                      ),
+                    ),
+                  ],
+                ),
+              );
         },
       ),
     );

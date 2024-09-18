@@ -1,6 +1,6 @@
 // ignore_for_file: constant_identifier_names
 
-import 'package:flutter/cupertino.dart';
+
 import 'package:get/get.dart';
 import 'package:sampleproject/pages/Details/category_detail.dart';
 import 'package:sampleproject/pages/Details/product-detail.dart';
@@ -11,7 +11,7 @@ import 'package:sampleproject/pages/cart/cart_page.dart';
 import 'package:sampleproject/pages/checkout/checkout_order.dart';
 import 'package:sampleproject/pages/checkout/map.dart';
 import 'package:sampleproject/pages/home/home_page.dart';
-import 'package:sampleproject/pages/home/main_page.dart';
+
 
 import '../pages/splash/splash_page.dart';
 class RouteHelper 
@@ -39,12 +39,12 @@ class RouteHelper
   static String getMap()=>'$map';
   static List<GetPage> routes = 
   [       
-            GetPage(name:map, page: ()=>Map()),
-          GetPage(name:initial, page: ()=>HomePage()),
-          GetPage(name:Checkout, page: ()=>CheckoutOrder()),
-          GetPage(name:Splash, page: ()=>SplashScreen()),
-          GetPage(name:SignIn, page: ()=>SignInPage()),
-          GetPage(name:SignUp, page: ()=>SignUpPage()),
+            GetPage(name:map, page: ()=>const Map()),
+          GetPage(name:initial, page: ()=>const HomePage()),
+          GetPage(name:Checkout, page: ()=>const CheckoutOrder()),
+          GetPage(name:Splash, page: ()=>const SplashScreen()),
+          GetPage(name:SignIn, page: ()=>const SignInPage()),
+          GetPage(name:SignUp, page: ()=>const SignUpPage()),
           GetPage(name:Product, page: ()
           {
 
@@ -70,7 +70,7 @@ class RouteHelper
           ),
           GetPage(name:Cart, page: () 
           {
-            return CartPage();
+            return const CartPage();
           },
           transition: Transition.fadeIn,
           

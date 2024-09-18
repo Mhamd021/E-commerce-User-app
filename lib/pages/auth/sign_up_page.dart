@@ -68,7 +68,7 @@ class SignUpPage extends StatelessWidget {
                   name: name,
                   email: email,
                   password: password,
-                  password_confirmation: password_confirmation
+                  passwordconfirmation: password_confirmation
                   );
                 authController.registration(signUpBody).then((status)
                 {
@@ -98,7 +98,7 @@ class SignUpPage extends StatelessWidget {
           [
             SizedBox(height: Dimensions.screenHeight/5),
             //app logo
-            Container
+            SizedBox
             (
               height: Dimensions.screenHeight*0.2,
               child: Center(

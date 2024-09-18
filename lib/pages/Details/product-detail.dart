@@ -1,11 +1,7 @@
-// ignore_for_file: prefer_const_constructors, duplicate_ignore
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sampleproject/controllers/cart_controller.dart';
 import 'package:sampleproject/controllers/product_controller.dart';
-import 'package:sampleproject/pages/cart/cart_page.dart';
-import 'package:sampleproject/pages/home/main_page.dart';
 import 'package:sampleproject/routes/route_helper.dart';
 import 'package:sampleproject/utili/app_consts.dart';
 import 'package:sampleproject/utili/colors.dart';
@@ -24,8 +20,7 @@ class ProductDetail  extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var rating = 3.0;
-    var product = Get.find<ProductController>().ProductList[pageId];
+    var product = Get.find<ProductController>().productList[pageId];
     Get.find<ProductController>().initProduct(product,Get.find<CartControler>());
     return Scaffold(
       backgroundColor: Colors.white,

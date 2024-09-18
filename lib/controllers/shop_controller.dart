@@ -7,7 +7,7 @@ class ShopController extends GetxController
     final ShopRepo shopRepo;
     ShopController({required this.shopRepo});
     List<dynamic> _shopList=[];
-    List<dynamic> get ShopList =>_shopList;
+    List<dynamic> get shopList =>_shopList;
   bool _isLoaded = false;
   bool get isLoaded =>_isLoaded; 
     Future<void> getshoplist() async

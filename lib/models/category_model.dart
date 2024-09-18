@@ -6,9 +6,9 @@ class Category {
 
   Category({ required success, required categories,  required message})
   {
-      this._success = success;
-      this._categories = categories;
-      this._message = message;
+      _success = success;
+      _categories = categories;
+      _message = message;
   }
 
   Category.fromJson(Map<String, dynamic> json) {

@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'package:sampleproject/controllers/product_controller.dart';
 import 'package:sampleproject/controllers/shop_controller.dart';
 import 'package:sampleproject/models/product_model.dart';
-import 'package:sampleproject/pages/Details/product-detail.dart';
 import 'package:sampleproject/routes/route_helper.dart';
 import 'package:sampleproject/utili/colors.dart';
 import 'package:sampleproject/utili/dimensions.dart';
@@ -25,25 +24,24 @@ class ShopDetail   extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // Get.lazyPut(()=>ProductModel());
-    var shop = Get.find<ShopController>().ShopList[pageId];
+    var shop = Get.find<ShopController>().shopList[pageId];
       var productm = Get.find<ProductModel>();
      List<dynamic> shopProducts=[];
     
    
     
     var product = Get.find<ProductController>();
-    product.ProductList.forEach((v)
-    {
-      if(product.ProductList[v].storeId == shop.id)
+    for (var v in product.productList) {
+      if(product.productList[v].storeId == shop.id)
       {
-        shopProducts.add(product.ProductList[v]);
+        shopProducts.add(product.productList[v]);
         print(shopProducts);
       }
       else
       {
         print("object");
       }
-    });
+    }
     Get.find<ProductController>().initProduct(productm,Get.find<CartControler>());
     return Scaffold(
       backgroundColor: Colors.white ,

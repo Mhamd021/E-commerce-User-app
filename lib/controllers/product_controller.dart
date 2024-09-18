@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sampleproject/controllers/cart_controller.dart';
 import 'package:sampleproject/models/product_model.dart';
-import 'package:sampleproject/models/shop_model.dart';
 import 'package:sampleproject/utili/colors.dart';
 
 import '../helper/product_repo.dart';
@@ -13,7 +12,7 @@ class ProductController extends GetxController
     final ProductRepo productRepo;
     ProductController({required this.productRepo});
     List<dynamic> _productList=[];
-    List<dynamic> get ProductList =>_productList;
+    List<dynamic> get productList =>_productList;
     late CartControler _cart;
         bool _isLoaded = false;
     bool get isLoaded => _isLoaded;

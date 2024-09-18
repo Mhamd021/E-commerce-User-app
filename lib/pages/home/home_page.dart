@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sampleproject/pages/account/account_page.dart';
 import 'package:sampleproject/pages/cart/cart_page.dart';
-import 'package:sampleproject/pages/checkout/checkout_order.dart';
 import 'package:sampleproject/utili/colors.dart';
 
 import '../orders/orders.dart';
